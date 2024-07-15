@@ -1,8 +1,4 @@
-# My title
-- Hello
-- Bye
+# ALX Frontend For Fun
 
-Hello
-
-I'm a text
-with 2 lines
+This repository houses tasks on frontend specialization with the aim of making frontend fun and practical. Tasks so far:
+- markdown2html.py
