@@ -78,14 +78,20 @@ def markdown_to_html(input_file, output_file):
 
 
 def parse_custom_syntax(text):
-    text = re.sub(r'\[\[(.*?)\]\]',
-                  lambda x: hashlib.md5(x.group(1)
-                                         .encode('utf-8')).hexdigest(),
-                  text)
-    text = re.sub(r'\(\((.*?)\)\)',
-                  lambda x: x.group(1)
-                             .replace('c', '').replace('C', ''),
-                  text)
+    text = re.sub(
+        r'\[\[(.*?)\]\]',
+        lambda x: hashlib.md5(x.group(1).encode('utf-8')).hexdigest(),
+        text
+    )
+    text = re.sub(
+        r'\(\((.*?)\)\)',
+        lambda x: x.group(1)
+                          .replace('c', '')
+                          .replace('C', ''),
+        text
+    )
+    text = re.sub(r'\*\*(.*?)\*\*', r'<b>\1</b>', text)
+    text = re.sub(r'__(.*?)__', r'<em>\1</em>', text)
     return text
 
 
