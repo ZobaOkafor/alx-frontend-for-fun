@@ -4,3 +4,4 @@ This repository houses tasks on frontend specialization with the aim of making f
 - markdown2html.py
 - flexbox
 - form
+- Fun with CSS
