@@ -1,0 +1,35 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin: 10px 5px;
+    position: relative;
+}
+
+/* Link styling */
+a {
+    text-decoration: none; /* Remove default underline */
+    color: #8a153a; /* Link color */
+    position: relative; /* Position relative to align pseudo-element */
+}
+
+/* Underline effect */
+a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjust based on the font size and line height */
+    width: 0; /* Start with no underline */
+    height: 3px; /* Thickness of the underline */
+    background-color: #8a153a; /* Color of the underline */
+    transition: width 0.5s ease-out; /* Smooth transition effect */
+    transform-origin: left; /* Origin of the underline growth */
+}
+
+/* Show underline on hover */
+a:hover::before {
+    width: 100%; /* Expand underline to full width on hover */
+}

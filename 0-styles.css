@@ -1,0 +1,52 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+ul {
+    display: grid;
+    place-items: center;
+    list-style: none;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+li {
+    border: 2.5px solid #727272;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    width: 300px;
+    height: 550px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 2.5fr;
+}
+
+span {
+    display: block;
+    height: 100px; /* Adjust based on your icon size */
+    width: 100px;  /* Adjust based on your icon size */
+    background: url('0-sprite.png') no-repeat;
+    background-size: auto; /* or specify the size of the sprite */
+}
+
+/* Specific icons */
+span.i-html {
+    background-position: -30px -40px; /* Adjust based on the icon's position in the sprite */
+}
+
+span.i-css {
+    background-position: -320px -40px; /* Adjust based on the icon's position in the sprite */
+}
+
+span.i-js {
+    background-position: -610px -40px; /* Adjust based on the icon's position in the sprite */
+}
