@@ -31,19 +31,22 @@ li {
 }
 
 span {
-    height:  100%;
-    width: 220px;
-    padding: 50px;
+    display: block;
+    height: 100px; /* Adjust based on your icon size */
+    width: 100px;  /* Adjust based on your icon size */
+    background: url('0-sprite.png') no-repeat;
+    background-size: auto; /* or specify the size of the sprite */
 }
 
+/* Specific icons */
 span.i-html {
-    background: url('0-sprite.png') no-repeat -30px -40px;
+    background-position: -30px -40px; /* Adjust based on the icon's position in the sprite */
 }
 
 span.i-css {
-    background: url('0-sprite.png') no-repeat -320px -40px;
+    background-position: -320px -40px; /* Adjust based on the icon's position in the sprite */
 }
 
 span.i-js {
-    background: url('0-sprite.png') no-repeat -610px -40px;
+    background-position: -610px -40px; /* Adjust based on the icon's position in the sprite */
 }
