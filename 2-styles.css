@@ -1,8 +1,8 @@
-/* Reset default styling */
-*, *::before, *::after {
-    box-sizing: border-box;
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Hide the default checkbox */
@@ -12,50 +12,57 @@
 
 /* Container for the toggle switch */
 .toggle {
-    display: inline-block;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px; /* Width of the toggle switch */
 }
 
-/* Label styling */
+/* Label for the toggle switch */
 .toggle-label {
     display: flex;
     align-items: center;
-    cursor: pointer;
-    background-color: #ccc; /* Background color when unchecked */
-    border-radius: 25px;
-    position: relative;
+    justify-content: space-between;
     width: 60px; /* Width of the toggle switch */
     height: 30px; /* Height of the toggle switch */
+    background-color: #ccc; /* Background color when unchecked */
+    border-radius: 30px; /* Rounded corners */
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 /* Inner part of the toggle switch */
 .toggle-inner {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    border-radius: 25px;
+    border-radius: 30px;
+    background-color: #fff; /* Color of the inner part */
+    transition: background-color 0.3s;
 }
 
-/* Switch part of the toggle switch */
+/* Handle of the toggle switch */
 .toggle-switch {
+    width: 28px; /* Size of the toggle handle */
+    height: 28px; /* Size of the toggle handle */
+    background-color: #fff; /* Color of the handle */
+    border-radius: 50%; /* Round handle */
     position: absolute;
-    top: 2px; /* Offset for the switch */
-    left: 2px;
-    width: 26px; /* Width of the switch */
-    height: 26px; /* Height of the switch */
-    background-color: #fff; /* Color of the switch */
-    border-radius: 50%;
-    transition: transform 0.3s ease; /* Smooth transition for the switch */
+    top: 1px; /* Adjust handle vertical position */
+    left: 1px; /* Adjust handle horizontal position */
+    transition: transform 0.3s;
 }
 
-/* Style when checkbox is checked */
+/* Change the background color and handle position when checked */
 .toggle-cb:checked + .toggle-label {
     background-color: #4CAF50; /* Background color when checked */
 }
 
 .toggle-cb:checked + .toggle-label .toggle-switch {
-    transform: translateX(30px); /* Move switch to the right when checked */
+    transform: translateX(30px); /* Move handle to the right when checked */
+}
+
+.toggle-cb:checked + .toggle-label .toggle-inner {
+    background-color: #4CAF50; /* Color of the inner part when checked */
 }
