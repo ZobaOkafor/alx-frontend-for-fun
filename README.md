@@ -5,3 +5,4 @@ This repository houses tasks on frontend specialization with the aim of making f
 - flexbox
 - form
 - Fun with CSS
+- sass_scss
