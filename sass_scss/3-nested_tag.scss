@@ -1,0 +1,10 @@
+/* This file assigns no margin or padding to body tags and a margin of 10px to all p tags inside body tags using nested declarations. */
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  p {
+    margin: 10px;
+  }
+}
