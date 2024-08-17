@@ -1,0 +1,9 @@
+/* This file sorts the variable $list_to_sort and prints the sorted list in the debug output. */
+
+$list_to_sort: john anna zoe kim felicia carrie;
+
+/* Sort the list. */
+$sorted_list: sort($list_to_sort);
+
+/* Print the sorted list. */
+@debug $sorted_list;
